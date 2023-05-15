@@ -1,3 +1,4 @@
+ [PostgreSQL]([https://redis.io/docs/data-types/](https://yuqi-wang-forever.github.io/postgres)).  
 # Redis data types tutorial Redis 数据类型教程
 
 Learning the basic Redis data types and how to use them  
