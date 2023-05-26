@@ -268,32 +268,34 @@
     创建项目　elasticsearch-lesson
     添加依赖
     ---
+    <dependencies>
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
-            <version>7.8.0</version>
+            <version>8.7.1</version>
         </dependency>
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-client</artifactId>
-            <version>7.8.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>2.8.2</version>
+            <version>8.7.1</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.9</version>
+            <version>2.12.7.1</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <version>4.13.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+    </dependencies>
     ---
 ### 创建ES客户端
     RestHighLevelClient esClient  = new RestHighLevelClient(RestClient.builder(new HttpHost("127.0.0.1",9200,"http")));
-    可以使用try-with-resource或者手动关闭资源
+    可以使用try-with-resource或者手动关闭资源(esClient.close())
